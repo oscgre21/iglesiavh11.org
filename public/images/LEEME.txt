@@ -1,0 +1,3 @@
+Coloca aquí las imágenes reales del sitio:
+- hero.jpg  → banner principal (mín. 1920x600, alta resolución)
+- bienvenida.jpg → foto para la sección de bienvenida
