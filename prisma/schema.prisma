@@ -1,0 +1,34 @@
+// Esquema de Prisma — Iglesia Hebreos 11
+// Provider actual: SQLite. Para migrar a PostgreSQL en el futuro basta con
+// cambiar `provider = "postgresql"` y la variable DATABASE_URL, y regenerar
+// las migraciones. El modelo y el código de la app no cambian.
+
+generator client {
+  provider = "prisma-client-js"
+  // "native" para desarrollo local; el target musl es para la imagen Docker (Alpine).
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+/// Registro de miembros (módulo 6 del checklist)
+model Member {
+  id            Int      @id @default(autoincrement())
+  fullName      String   @map("full_name")
+  birthDate     String?  @map("birth_date")
+  gender        String?
+  maritalStatus String?  @map("marital_status")
+  address       String?
+  phone         String?
+  email         String?
+  baptized      Boolean  @default(false)
+  children      Int      @default(0)
+  ministry      String?
+  howFound      String?  @map("how_found")
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  @@map("members")
+}

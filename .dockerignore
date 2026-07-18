@@ -26,6 +26,9 @@ docker-compose*.yml
 .idea
 .DS_Store
 
+# Base de datos local (no debe entrar al contexto de build)
+prisma/data
+
 # Documentación y material fuente (no necesario en runtime)
 README.md
 AGENTS.md

@@ -42,6 +42,8 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   // Genera un servidor mínimo autocontenido para Docker (.next/standalone).
   output: "standalone",
+  // Prisma usa un binario de motor nativo: no debe empaquetarse por el bundler.
+  serverExternalPackages: ["@prisma/client", "prisma"],
   poweredByHeader: false, // no revelar "X-Powered-By: Next.js"
   reactStrictMode: true,
   async headers() {

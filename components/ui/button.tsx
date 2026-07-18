@@ -38,6 +38,7 @@ export function Button({
   size,
   className,
   children,
+  onClick,
   ...props
 }: ButtonProps) {
   const classes = cn(button({ variant, size }), className);
@@ -48,6 +49,7 @@ export function Button({
       <Link
         href={href}
         className={classes}
+        onClick={onClick as unknown as React.MouseEventHandler<HTMLAnchorElement>}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
         {children}
@@ -56,7 +58,7 @@ export function Button({
   }
 
   return (
-    <button className={classes} {...props}>
+    <button className={classes} onClick={onClick} {...props}>
       {children}
     </button>
   );

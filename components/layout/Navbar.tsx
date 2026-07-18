@@ -55,9 +55,15 @@ export function Navbar() {
           })}
         </ul>
 
-        <div className="hidden lg:block">
-          <Button href={site.hero.primaryCta.href} size="sm">
-            {site.hero.primaryCta.label}
+        <div className="hidden items-center gap-3 lg:flex">
+          <Link
+            href={site.actions.donate.href}
+            className="text-sm font-semibold text-gold transition-colors hover:text-gold-soft"
+          >
+            {site.actions.donate.label}
+          </Link>
+          <Button href={site.actions.register.href} size="sm">
+            {site.actions.register.label}
           </Button>
         </div>
 
@@ -92,9 +98,21 @@ export function Navbar() {
               </Link>
             </li>
           ))}
-          <li className="mt-2 px-3">
-            <Button href={site.hero.primaryCta.href} className="w-full">
-              {site.hero.primaryCta.label}
+          <li className="mt-2 flex gap-3 px-3">
+            <Button
+              href={site.actions.donate.href}
+              variant="secondary"
+              className="flex-1"
+              onClick={() => setOpen(false)}
+            >
+              {site.actions.donate.label}
+            </Button>
+            <Button
+              href={site.actions.register.href}
+              className="flex-1"
+              onClick={() => setOpen(false)}
+            >
+              {site.actions.register.label}
             </Button>
           </li>
         </ul>

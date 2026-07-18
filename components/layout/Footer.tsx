@@ -41,6 +41,16 @@ export function Footer() {
                 Nuestra Historia
               </Link>
             </li>
+            <li>
+              <Link href="/registro" className="text-white/75 transition-colors hover:text-gold">
+                Regístrate
+              </Link>
+            </li>
+            <li>
+              <Link href="/donaciones" className="text-white/75 transition-colors hover:text-gold">
+                Donaciones
+              </Link>
+            </li>
           </ul>
         </div>
 

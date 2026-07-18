@@ -13,3 +13,11 @@ services:
       NODE_ENV: production
       PORT: "3000"
       HOSTNAME: "0.0.0.0"
+      # Base de datos SQLite dentro del volumen persistente
+      DATABASE_URL: "file:./data/hebreos11.db"
+    volumes:
+      # Persiste la base de datos entre reinicios/despliegues
+      - hebreos11-db:/app/prisma/data
+
+volumes:
+  hebreos11-db:

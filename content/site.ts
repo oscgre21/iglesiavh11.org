@@ -152,6 +152,25 @@ export const site = {
     ],
   },
 
+  // ── Donaciones / Diezmos (checklist 7.3) ──────────────────────────────────
+  // La integración de pagos en línea queda para una fase posterior.
+  giving: {
+    verse:
+      "Cada uno dé como propuso en su corazón: no con tristeza, ni por necesidad, porque Dios ama al dador alegre.",
+    verseRef: "2 Corintios 9:7",
+    intro:
+      "Tu diezmo y ofrenda sostienen la obra de Dios: el evangelismo, la formación de líderes y el servicio a nuestra comunidad. Gracias por sembrar en el Reino.",
+    onlineEnabled: false, // TODO: activar cuando se integre la plataforma de pago
+    // TODO: completar con los datos bancarios reales de la iglesia
+    bank: {
+      bankName: "—",
+      accountName: "Iglesia Visionaria Hebreos 11",
+      accountNumber: "—",
+      accountType: "Cuenta Corriente",
+      currency: "DOP (RD$)",
+    },
+  },
+
   // ── Navegación ────────────────────────────────────────────────────────────
   nav: [
     { label: "Inicio", href: "/" },
@@ -161,6 +180,11 @@ export const site = {
     { label: "Galería", href: "/galeria" },
     { label: "Contacto", href: "/contacto" },
   ],
+  // Acciones destacadas (botones del header)
+  actions: {
+    register: { label: "Regístrate", href: "/registro" },
+    donate: { label: "Dona", href: "/donaciones" },
+  },
 } as const;
 
 export type Site = typeof site;
