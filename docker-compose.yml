@@ -1,0 +1,15 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        NODE_VERSION: 22-alpine
+    image: iglesiavh11-org:latest
+    container_name: iglesiavh11
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      HOSTNAME: "0.0.0.0"

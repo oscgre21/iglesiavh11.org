@@ -1,0 +1,33 @@
+# Dependencias e instalables (se reinstalan en la imagen)
+node_modules
+npm-debug.log*
+
+# Artefactos de build
+.next
+out
+build
+dist
+
+# Git / metadatos
+.git
+.gitignore
+
+# Entorno y secretos
+.env
+.env*.local
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# Editor / SO
+.vscode
+.idea
+.DS_Store
+
+# Documentación y material fuente (no necesario en runtime)
+README.md
+AGENTS.md
+CLAUDE.md
+brand-assets

@@ -40,6 +40,8 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Genera un servidor mínimo autocontenido para Docker (.next/standalone).
+  output: "standalone",
   poweredByHeader: false, // no revelar "X-Powered-By: Next.js"
   reactStrictMode: true,
   async headers() {
