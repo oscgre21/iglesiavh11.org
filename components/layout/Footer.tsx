@@ -36,6 +36,11 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href="/historia" className="text-white/75 transition-colors hover:text-gold">
+                Nuestra Historia
+              </Link>
+            </li>
           </ul>
         </div>
 

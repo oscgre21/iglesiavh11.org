@@ -80,11 +80,85 @@ export const site = {
     title: "Video de bienvenida",
   },
 
+  // ── Quiénes Somos (textos oficiales del checklist) ────────────────────────
+  about: {
+    mission:
+      "Formar individuos en las áreas socio-psico-emocional y espiritual a través de la Palabra de Dios, para que estén equipados y aptos para toda buena obra, con el fin de expandir el evangelio de Jesucristo a las naciones.",
+    vision:
+      "Ser una iglesia que expanda el reino de Dios nacional e internacionalmente a través de la predicación del evangelio, fomentando una cultura de crecimiento que refleje el amor de Cristo.",
+    objective:
+      "Enseñar a los creyentes a ser dignos representantes del reino de los cielos, obedeciendo a toda autoridad terrenal y siendo buenos ciudadanos, expandiendo esta visión en toda la geografía nacional e internacional.",
+    values: [
+      "Amor", "Fidelidad", "Sinceridad", "Compañerismo", "Lealtad", "Honradez",
+      "Responsabilidad", "Tolerancia", "Servicio", "Solidaridad", "Emprendimiento",
+      "Creatividad", "Honestidad", "Respeto", "Paciencia", "Competencia",
+    ],
+    pastors: [
+      {
+        name: "Dr. Eduardo Leonardo Piña Mateo",
+        role: "Pastor Principal",
+        bio: "Desde 2010 pastorea la Iglesia Hebreos 11, fortaleciendo la visión de formar personas sanas espiritualmente, desarrollar líderes y servir integralmente a la comunidad. Su ministerio se caracteriza por la enseñanza de la Palabra y el discipulado.",
+        // TODO: agregar foto en /images/pastores/pastor.jpg
+        photo: "",
+      },
+      {
+        name: "Lic. Eunice Elizabeth Peña de la Rosa",
+        role: "Pastora",
+        bio: "Impulsa espacios de crecimiento para mujeres, promoviendo el amor propio sano, el perdón y el liderazgo espiritual en el hogar y la iglesia. Es fundadora y directora de un colegio infantil con más de 30 años de experiencia en la formación emocional, social y espiritual de niños. Su compromiso es extender el Reino de Dios mediante la enseñanza, el discipulado y la consejería.",
+        // TODO: agregar foto en /images/pastores/pastora.jpg
+        photo: "",
+      },
+    ],
+  },
+
+  // ── Ministerios: Pilares de la iglesia (checklist 7.2) ────────────────────
+  pillars: [
+    { name: "Adoración", desc: "Conduce a la congregación a la presencia de Dios a través de la música y la alabanza." },
+    { name: "Enseñanza", desc: "Formación bíblica y discipulado para el crecimiento espiritual de los creyentes." },
+    { name: "Conservación", desc: "Acompaña e integra a los nuevos creyentes para que echen raíces en la fe." },
+    { name: "Evangelismo", desc: "Comparte el evangelio de Cristo dentro y fuera de la comunidad." },
+    { name: "Eventos Ceremoniales", desc: "Coordina bautismos, dedicaciones y celebraciones especiales de la iglesia." },
+    { name: "Mayordomía", desc: "Administra con integridad los recursos y bienes de la casa de Dios." },
+    { name: "Intercesión", desc: "Sostiene la vida de la iglesia mediante la oración y la intercesión." },
+    { name: "Recreación", desc: "Promueve la sana convivencia, el compañerismo y la integración familiar." },
+    { name: "Arte", desc: "Expresa el mensaje de Dios a través de las artes creativas y escénicas." },
+    { name: "Multimedia", desc: "Lleva el mensaje más allá del templo con producción audiovisual y digital." },
+  ],
+
+  // ── Sermones / Transmisiones (checklist 7.1) ──────────────────────────────
+  sermons: {
+    channelUrl: "https://www.youtube.com/@iglesiavisionariahebreos1130",
+    channelHandle: "@iglesiavisionariahebreos1130",
+    // TODO: reemplazar con los IDs reales de videos destacados (parte final de la URL de YouTube).
+    featured: [
+      { id: "", title: "Prédica destacada 1" },
+      { id: "", title: "Prédica destacada 2" },
+      { id: "", title: "Prédica destacada 3" },
+    ],
+  },
+
+  // ── Galería (checklist 7.4) — imágenes PLACEHOLDER hasta recibir las reales ─
+  gallery: {
+    categories: ["Todos", "Cultos", "Eventos", "Comunidad"] as const,
+    photos: [
+      { src: "/images/gallery/foto-1.jpg", alt: "Culto", category: "Cultos" },
+      { src: "/images/gallery/foto-2.jpg", alt: "Alabanza", category: "Cultos" },
+      { src: "/images/gallery/foto-3.jpg", alt: "Bautismos", category: "Eventos" },
+      { src: "/images/gallery/foto-4.jpg", alt: "Jóvenes", category: "Comunidad" },
+      { src: "/images/gallery/foto-5.jpg", alt: "Servicio", category: "Cultos" },
+      { src: "/images/gallery/foto-6.jpg", alt: "Comunidad", category: "Comunidad" },
+      { src: "/images/gallery/foto-7.jpg", alt: "Evento", category: "Eventos" },
+      { src: "/images/gallery/foto-8.jpg", alt: "Familia", category: "Comunidad" },
+    ],
+  },
+
   // ── Navegación ────────────────────────────────────────────────────────────
   nav: [
     { label: "Inicio", href: "/" },
-    { label: "Nuestra Historia", href: "/historia" },
+    { label: "Quiénes Somos", href: "/quienes-somos" },
     { label: "Ministerios", href: "/ministerios" },
+    { label: "Sermones", href: "/sermones" },
+    { label: "Galería", href: "/galeria" },
     { label: "Contacto", href: "/contacto" },
   ],
 } as const;
